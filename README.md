@@ -10,29 +10,29 @@ This project investigates the key factors influencing product ranking on Amazon.
 - Applied **survival analysis** to understand ranking stability over time
 
 ## Repository structure
-├── ltr-gbt-lambdamart-model/       # Learning-to-Rank model implementation
-│   ├── ltr-gbt-lambdamart.ipynb    # Main model notebook
-├── scraping/                       # Data collection utilities
-│   ├── html_retrieve_pp.py         # Retrieve HTML of product pages from ASIN
-│   ├── html-retrieve-serp.py       # Retrieve HTML of SERP from search queries
-│   ├── initial_cleaning_data.ipynb # Initial data preprocessing
-│   ├── product_parser.py           # Parse HMTL file retrieved to structured product information
-├── survival-analysis/              # Ranking stability analysis
-│   ├── main                        # Main implementation
-│   └── surviva_analysis.ipynb      # Survival analysis notebook
-├── tabular-data/                   # Dataset after parsing and convert into tabular format with asin as identifier
-│   ├── data/                       # Organized data directory
-│   │   ├── data_2025-03-21.zip     #  (March 21)
-│   │   ├── data_2025-03-22.zip     # Product page data (March 22)
-│   │   ├── data_2025-03-23.zip     # Product page data (March 23)
-│   │   ├── data_2025-03-24.zip     # Product page data (March 24)
-│   │   ├── data_2025-03-25.zip     # Product page data (March 25)
-│   │   ├── data_2025-03-26.zip     # Product page data (March 26)
-│   │   ├── data_2025-03-27.zip     # Product page data (March 27)
-│   │   ├── keywords.csv            # List of keywords used
-│   │   ├── semantic.csv            # Semantic simiarity score using model from Hugging Face 
-│   │   └── product_page.zip        # Unique product data
-└── README.md                       # Project documentation
+├── ltr-gbt-lambdamart-model/ # Learning-to-Rank model implementation
+│ ├── ltr-gbt-lambdamart.ipynb # Main model notebook
+├── scraping/ # Data collection utilities
+│ ├── html_retrieve_pp.py # Retrieve HTML of product pages from ASIN
+│ ├── html-retrieve-serp.py # Retrieve HTML of SERP from search queries
+│ ├── initial_cleaning_data.ipynb # Initial data preprocessing
+│ ├── product_parser.py # Parse HMTL file retrieved to structured product information
+├── survival-analysis/ # Ranking stability analysis
+│ ├── main # Main implementation
+│ └── surviva_analysis.ipynb # Survival analysis notebook
+├── tabular-data/ # Dataset after parsing and convert into tabular format with asin as identifier
+│ ├── data/ # Organized data directory
+│ │ ├── data_2025-03-21.zip # (March 21)
+│ │ ├── data_2025-03-22.zip # Product page data (March 22)
+│ │ ├── data_2025-03-23.zip # Product page data (March 23)
+│ │ ├── data_2025-03-24.zip # Product page data (March 24)
+│ │ ├── data_2025-03-25.zip # Product page data (March 25)
+│ │ ├── data_2025-03-26.zip # Product page data (March 26)
+│ │ ├── data_2025-03-27.zip # Product page data (March 27)
+│ │ ├── keywords.csv # List of keywords used
+│ │ ├── semantic.csv # Semantic similarity score using model from Hugging Face
+│ │ └── product_page.zip # Unique product data
+└── README.md # Project documentation
 
 ## Key findings
 
