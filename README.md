@@ -4,35 +4,45 @@
 This project investigates the key factors influencing product ranking on Amazon.be and examines the stability of that ranking over time to provide actionable insights for sellers to optimize their product visibility in Amazon's competitive marketplace.
 
 ## Project highlights
-- Analyzed **28,406 unique product listings** from Amazon.be
+- Analyze **28,406 unique product listings** from Amazon.be
 - Data collected between **March 21-27, 2025**
-- Employed **Gradient Boosted Tree Learning-to-Rank model (LambdaMART)**
-- Applied **survival analysis** to understand ranking stability over time
+- Employe **Gradient Boosted Tree Learning-to-Rank model (LambdaMART)**
+- Applie **survival analysis** to understand ranking stability over time
 
 ## Repository structure
-├── ltr-gbt-lambdamart-model/ # Learning-to-Rank model implementation
-│ ├── ltr-gbt-lambdamart.ipynb # Main model notebook
-├── scraping/ # Data collection utilities
-│ ├── html_retrieve_pp.py # Retrieve HTML of product pages from ASIN
-│ ├── html-retrieve-serp.py # Retrieve HTML of SERP from search queries
-│ ├── initial_cleaning_data.ipynb # Initial data preprocessing
-│ ├── product_parser.py # Parse HMTL file retrieved to structured product information
-├── survival-analysis/ # Ranking stability analysis
-│ ├── main # Main implementation
-│ └── surviva_analysis.ipynb # Survival analysis notebook
-├── tabular-data/ # Dataset after parsing and convert into tabular format with asin as identifier
-│ ├── data/ # Organized data directory
-│ │ ├── data_2025-03-21.zip # (March 21)
-│ │ ├── data_2025-03-22.zip # Product page data (March 22)
-│ │ ├── data_2025-03-23.zip # Product page data (March 23)
-│ │ ├── data_2025-03-24.zip # Product page data (March 24)
-│ │ ├── data_2025-03-25.zip # Product page data (March 25)
-│ │ ├── data_2025-03-26.zip # Product page data (March 26)
-│ │ ├── data_2025-03-27.zip # Product page data (March 27)
-│ │ ├── keywords.csv # List of keywords used
-│ │ ├── semantic.csv # Semantic similarity score using model from Hugging Face
-│ │ └── product_page.zip # Unique product data
-└── README.md # Project documentation
+
+├── ltr-gbt-lambdamart-model/         # Learning-to-Rank model implementation
+│   ├── ltr-gbt-lambdamart.ipynb      # Main model notebook
+│   └── main                          # Main implementation
+│
+├── scraping/                         # Data collection utilities
+│   ├── html_retrieve_pp.py           # Retrieve HTML of product pages from ASIN
+│   ├── html-retrieve-serp.py         # Retrieve HTML of SERP from search queries
+│   ├── HTML-retrieve.py              # Base HTML retrieval functionality
+│   ├── initial_cleaning_data.ipynb   # Initial data preprocessing
+│   ├── product_parser.py             # Parse HTML file to structured product information
+│   └── sp                            # Additional scraping utilities
+│
+├── survival-analysis/                # Ranking stability analysis
+│   ├── main                          # Main implementation
+│   └── surviva_analysis.ipynb        # Survival analysis notebook
+│
+├── tabular-data/                     # Dataset after parsing and convert into tabular format with asin as identifier
+│   ├── data/                         # Organized data directory
+│   │   ├── data_2025-03-21.zip       # Product page data (March 21)
+│   │   ├── data_2025-03-22.zip       # Product page data (March 22)
+│   │   ├── data_2025-03-23.zip       # Product page data (March 23)
+│   │   ├── data_2025-03-24.zip       # Product page data (March 24)
+│   │   ├── data_2025-03-25.zip       # Product page data (March 25)
+│   │   ├── data_2025-03-26.zip       # Product page data (March 26)
+│   │   ├── data_2025-03-27.zip       # Product page data (March 27)
+│   │   ├── keywords.csv              # List of keywords used
+│   │   ├── semantic.csv              # Semantic similarity score using model from Hugging Face
+│   │   └── product_page.zip          # Unique product data
+│   ├── keywords.csv                  # List of keywords used (reference)
+│   └── product_page.zip              # Unique product data (reference)
+│
+└── README.md                         # Project documentation
 
 ## Key findings
 
