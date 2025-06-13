@@ -6,8 +6,8 @@ This project investigates the key factors influencing product ranking on Amazon.
 ## Project highlights
 - Analyze **28,406 unique product listings** from Amazon.be
 - Data collected between **March 21-27, 2025**
-- Employe **Gradient Boosted Tree Learning-to-Rank model (LambdaMART)**
-- Applie **survival analysis** to understand ranking stability over time
+- Employ **Gradient Boosted Tree Learning-to-Rank model (LambdaMART)**
+- Apply **survival analysis** to understand ranking stability over time
 
 ## Repository structure
 
