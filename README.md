@@ -31,10 +31,106 @@ This project analyzes the Amazon product ranking ecosystem using a dataset of ov
 
 ## Key Contributions
 
-- 🔍 **Empirical replication** of Amazon’s ranking logic using machine learning  
-- 📊 **Feature importance analysis** to understand ranking drivers  
-- ⏱️ **Novel use of survival analysis** to evaluate ranking persistence  
-- ✅ **Actionable recommendations** for sellers on how to improve and sustain visibility
+- **Empirical replication** of Amazon’s ranking logic using machine learning  
+- **Feature importance analysis** to understand ranking drivers  
+- **Novel use of survival analysis** to evaluate ranking persistence  
+- **Actionable recommendations** for sellers on how to improve and sustain visibility
+
+## 
+## Ranking Model and Survival Analysis: Key Findings
+
+This study identifies key product features affecting Amazon rankings and ranking stability, offering actionable insights for sellers aiming to enhance visibility and performance on the platform.
+
+---
+
+### Ranking Model Results
+
+We evaluate the model's performance and feature importance using XGBoost and SHAP.
+
+#### Model Performance
+- **nDCG**: 0.859  
+- **Precision**: 0.441  
+- These results demonstrate strong predictive ability using publicly scraped data and outperform several comparable studies.
+- Performance varies across queries, which aligns with prior research observations.
+
+#### Feature Importance (via SHAP)
+
+- **Sales Performance**  
+  - Sales rank is the most predictive feature.
+  - Sales badges (e.g., "200+ sold") are important but secondary.
+  - 👉 _Sellers should aim to improve sales rank through volume-driving tactics._
+
+- **Sentiment Features**  
+  - Review count and product ratings increase relevance.
+  - Popularity (derived from reviews, ratings, badges) has minimal extra value.
+  - 👉 _Use tools like [Amazon Vine](https://sell.amazon.com/tools/vine) or the "Request a Review" button to build review volume._
+
+- **Pricing**  
+  - Price competitiveness matters more than absolute price.
+  - Competitive pricing boosts rankings, while discounts show limited effect.
+  - 👉 _Leverage dynamic pricing and tools for competitive pricing within search queries._
+
+- **Query-Product Semantic Similarity**  
+  - Semantic title match is significantly more important than keyword stuffing.
+  - Lexical similarity has negligible impact.
+  - 👉 _Use semantically rich language aligned with customer intent. Use tools like [Search Query Performance](https://sellercentral.amazon.com/help/hub/reference/external/G8J4CB5ZBF3NX7TP) to guide content updates._
+
+
+### Survival Analysis Results
+
+We analyze how listings maintain visibility over time (i.e., "ranking survival").
+
+#### Survival Probabilities
+
+- **Organic Listings**  
+  - Sharp early drop, especially within first 15–30 hours.
+  - Stabilize after surviving initial competition.
+  
+- **Sponsored Listings**  
+  - High initial survival due to ad placement.
+  - Decline over time due to ad pacing or budget constraints.
+  
+- Both listing types converge to ~75% daily survival probability after Day 2.
+
+#### Feature Effects on Survival Time
+
+- **Organic Hourly Survival**  
+  - Improved by: sales badge, review volume, rating.
+  - Not significantly affected by price competitiveness.
+
+- **Sponsored Hourly Survival**  
+  - Improved by: competitive pricing.
+  - Limited influence from reviews or ratings (due to paid placement dynamics).
+
+- **Daily Survival (Both Types)**  
+  - Strongly predicted by initial rank and category sales rank.
+  - Subcategory rank has inverse relationship (possibly due to lower competition).
+  
+👉 _Sellers should prioritize feature optimization during high-risk periods: early hours and Days 2–3._
+
+### Strategic Implications
+
+Tailor product listing strategies by feature importance and desired timeframe:
+
+| Feature                    | Rank Impact | Hourly Survival (Organic) | Hourly Survival (Sponsored) | Daily Survival (Organic) | Daily Survival (Sponsored) |
+|----------------------------|-------------|----------------------------|------------------------------|---------------------------|-----------------------------|
+| Sub-category sales rank    | +++         | ↑                          | ↑                            | ○                         | ↑                           |
+| Main category sales rank   | +++         | ↓                          | ○                            | ○                         | ↓                           |
+| Sales badge                | ++          | ↑                          | ○                            | ↑                         | ○                           |
+| Price competitiveness      | +++         | ○                          | ↑                            | ○                         | ○                           |
+| Semantic title             | +++         |                            |                              |                           |                             |
+| Review count               | ++          | ↑                          | ○                            | ○                         | ○                           |
+| Rating                     | ++          | ↓                          | ○                            | ○                         | ○                           |
+| Semantic bullet points     | ++          |                            |                              |                           |                             |
+| Price                     | ++          | ↑                          | ○                            | ↑                         | ↑                           |
+| Discount                   | ++          | ↑                          | ○                            | ○                         | ○                           |
+| Semantic description       | ++          |                            |                              |                           |                             |
+| Prime badge                | +           | ↑                          | ○                            | ↑                         | ↑                           |
+| Popularity                 | +           | ↑                          | ○                            | ○                         | ○                           |
+| Initial rank               | -           | ↓                          | ↓                            | ↓                         | ↓                           |
+
+> 🔹 `+++` = High importance, `++` = Medium, `+` = Low  
+> 🔹 `↑` = Improves survival, `↓` = Reduces survival, `○` = Not significant
 
 ## Dataset
 Using a dataset of 28,406 unique product listings scraped from Amazon.be between March 21 and 27, 2025 (total 1,524,775 rows), this research investigates the key factors influencing product ranking and the stability of that ranking over time. 
