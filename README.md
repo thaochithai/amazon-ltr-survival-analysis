@@ -1,13 +1,42 @@
 # Amazon product ranking analysis
 
 ## Overview
-Product ranking is critical to user engagement and sales performance on e-commerce marketplaces. Despite its significance, limited research focused on analyzing the features and temporal dynamics that influence product ranking from the seller's perspective. Using a dataset of 28,406 unique product listings scraped from Amazon.be between March 21 and 27, 2025, this study investigates the key factors influencing product ranking and the stability of that ranking over time. Employing a Gradient Boosted Tree Learning-to-Rank model (LambdaMART), the analysis reveals that sales rank is the most influential factor in determining product position, followed by price competitiveness and semantic similarity between title and search query. Additionally, survival analysis highlights that while sponsored products tend to exhibit greater short-term ranking stability, they are significantly more likely to drop to a lower rank over time compared to organic listings. These findings suggest that ad placements should be viewed as tactical tools for short-term visibility, whereas sustained success on Amazon requires strong organic performance, driven by factors such as competitive pricing, high-quality content, and reviews. As a result, this research provides actionable insights for sellers to strategically apply paid and organic approaches to optimize and maintain product visibility in Amazon’s competitive marketplace.
+Online marketplaces are essential platforms for businesses to sell products and for customers to find them quickly and efficiently. These platforms serve three primary stakeholders:
+- **The e-commerce marketplace**
+- **Sellers**
+- **Customers**
+Customers rely on these platforms to reduce search costs when looking for products. Meanwhile, marketplaces like Amazon continuously refine **ranking algorithms** to present the most relevant results. These rankings significantly impact purchase decisions and, in turn, platform revenue. Products that appear higher in search results enjoy increased visibility, click-through rates, and sales — making product ranking optimization critical for sellers and platforms alike.
 
-## Project highlights
-- Analyze **28,406 unique product listings** from Amazon.be
-- Data collected between **March 21-27, 2025**
-- Employ **Gradient Boosted Tree Learning-to-Rank model (LambdaMART)**
-- Apply **survival analysis** to understand ranking stability over time
+Amazon is the most influential e-commerce marketplace:
+
+- **300M+ monthly active users** (as of 2022)
+- **56%** of online shoppers start their product search on Amazon
+
+To help sellers boost visibility, Amazon offers:
+- **Sponsored products** (paid search ads)
+- **Search Engine Optimization (SEO)** tactics to improve organic rankings
+
+However, the specifics of Amazon’s ranking algorithm are proprietary. Sellers are left to **infer ranking factors** based on experience and experimentation. Complicating things further, **rankings are dynamic**, evolving based on user behavior and competition. While getting to the top is challenging, **staying there is even harder**.
+
+## Research Approach
+
+This project analyzes the Amazon product ranking ecosystem using a dataset of over **28,000 product listings** scraped hourly from [Amazon.be](https://www.amazon.be). It applies two core methodologies:
+
+1. **Learning-to-Rank (LTR)**  
+   To approximate Amazon's ranking algorithm and evaluate feature importance
+
+2. **Survival Analysis**  
+   To assess the *temporal stability* of product rankings and determine which features help maintain high rank positions over time
+
+## Key Contributions
+
+- 🔍 **Empirical replication** of Amazon’s ranking logic using machine learning  
+- 📊 **Feature importance analysis** to understand ranking drivers  
+- ⏱️ **Novel use of survival analysis** to evaluate ranking persistence  
+- ✅ **Actionable recommendations** for sellers on how to improve and sustain visibility
+
+## Dataset
+Using a dataset of 28,406 unique product listings scraped from Amazon.be between March 21 and 27, 2025 (total 1,524,775 rows), this research investigates the key factors influencing product ranking and the stability of that ranking over time. 
 
 ## Repository structure
 
