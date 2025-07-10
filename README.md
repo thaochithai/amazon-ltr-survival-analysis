@@ -6,7 +6,7 @@ Online marketplaces are essential platforms for businesses to sell products and 
 - **Sellers**
 - **Customers**
 
-Customers rely on these platforms to reduce search costs when looking for products. Meanwhile, marketplaces like Amazon continuously refine **ranking algorithms** to present the most relevant results. These rankings significantly impact purchase decisions and, in turn, platform revenue. Products that appear higher in search results enjoy increased visibility, click-through rates, and sales — making product ranking optimization critical for sellers and platforms alike.
+Customers rely on these platforms to reduce search costs when looking for products. Meanwhile, marketplaces like Amazon continuously refine **ranking algorithms** to present the most relevant results. These rankings significantly impact purchase decisions and, in turn, platform revenue. Products that appear higher in search results enjoy increased visibility, click-through rates, and sales, making product ranking optimization critical for sellers and platforms alike.
 
 Amazon is the most influential e-commerce marketplace:
 
