@@ -36,7 +36,34 @@ This project analyzes the Amazon product ranking ecosystem using a dataset of ov
 - **Novel use of survival analysis** to evaluate ranking persistence  
 - **Actionable recommendations** for sellers on how to improve and sustain visibility
 
-## 
+## Dataset
+Using a dataset of 28,406 unique product listings scraped from Amazon.be between March 21 and 27, 2025 (total 1,524,775 rows), this research investigates the key factors influencing product ranking and the stability of that ranking over time. 
+
+## Repository structure
+
+### ltr-gbt-lambdamart-model/
+- `ltr-gbt-lambdamart.ipynb`: Main Learning-to-Rank model notebook
+
+### scraping/
+- `html_retrieve_pp.py`: Retrieve HTML of product pages from ASIN
+- `html-retrieve-serp.py`: Retrieve HTML of SERP from search queries
+- `initial_cleaning_data.ipynb`: Initial data preprocessing
+- `product_parser.py`: Parse HTML files into structured product information
+
+### survival-analysis/
+- `main/`: Main implementation directory
+- `surviva_analysis.ipynb`: Survival analysis notebook
+
+### tabular-data/
+- `data/`: Organized dataset directory
+  - `data_2025-03-21.zip` to `data_2025-03-27.zip`: Product page data (March 21–27)
+  - `keywords.csv`: List of keywords used
+  - `semantic.csv`: Semantic similarity scores using Hugging Face model
+  - `product_page.zip`: Unique product data
+
+### Root files
+- `README.md`: Project documentation
+
 ## Ranking Model and Survival Analysis: Key Findings
 
 This study identifies key product features affecting Amazon rankings and ranking stability, offering actionable insights for sellers aiming to enhance visibility and performance on the platform.
@@ -131,31 +158,3 @@ Tailor product listing strategies by feature importance and desired timeframe:
 
 > 🔹 `+++` = High importance, `++` = Medium, `+` = Low  
 > 🔹 `↑` = Improves survival, `↓` = Reduces survival, `○` = Not significant
-
-## Dataset
-Using a dataset of 28,406 unique product listings scraped from Amazon.be between March 21 and 27, 2025 (total 1,524,775 rows), this research investigates the key factors influencing product ranking and the stability of that ranking over time. 
-
-## Repository structure
-
-### ltr-gbt-lambdamart-model/
-- `ltr-gbt-lambdamart.ipynb`: Main Learning-to-Rank model notebook
-
-### scraping/
-- `html_retrieve_pp.py`: Retrieve HTML of product pages from ASIN
-- `html-retrieve-serp.py`: Retrieve HTML of SERP from search queries
-- `initial_cleaning_data.ipynb`: Initial data preprocessing
-- `product_parser.py`: Parse HTML files into structured product information
-
-### survival-analysis/
-- `main/`: Main implementation directory
-- `surviva_analysis.ipynb`: Survival analysis notebook
-
-### tabular-data/
-- `data/`: Organized dataset directory
-  - `data_2025-03-21.zip` to `data_2025-03-27.zip`: Product page data (March 21–27)
-  - `keywords.csv`: List of keywords used
-  - `semantic.csv`: Semantic similarity scores using Hugging Face model
-  - `product_page.zip`: Unique product data
-
-### Root files
-- `README.md`: Project documentation
