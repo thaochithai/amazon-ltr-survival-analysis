@@ -70,24 +70,24 @@ This study identifies key product features affecting Amazon rankings and ranking
 
 ---
 
-### Ranking Model Results
+### Ranking model results
 
 We evaluate the model's performance and feature importance using XGBoost and SHAP.
 
-#### Model Performance
+#### Model performance
 - **nDCG**: 0.859  
 - **Precision**: 0.441  
 - These results demonstrate strong predictive ability using publicly scraped data and outperform several comparable studies.
 - Performance varies across queries, which aligns with prior research observations.
 
-#### Feature Importance (via SHAP)
+#### Feature importance (via SHAP)
 
-- **Sales Performance**  
+- **Sales performance**  
   - Sales rank is the most predictive feature.
   - Sales badges (e.g., "200+ sold") are important but secondary.
   - 👉 _Sellers should aim to improve sales rank through volume-driving tactics._
 
-- **Sentiment Features**  
+- **Sentiment features**  
   - Review count and product ratings increase relevance.
   - Popularity (derived from reviews, ratings, badges) has minimal extra value.
   - 👉 _Use tools like [Amazon Vine](https://sell.amazon.com/tools/vine) or the "Request a Review" button to build review volume._
@@ -97,49 +97,49 @@ We evaluate the model's performance and feature importance using XGBoost and SHA
   - Competitive pricing boosts rankings, while discounts show limited effect.
   - 👉 _Leverage dynamic pricing and tools for competitive pricing within search queries._
 
-- **Query-Product Semantic Similarity**  
+- **Query-product semantic similarity**  
   - Semantic title match is significantly more important than keyword stuffing.
   - Lexical similarity has negligible impact.
   - 👉 _Use semantically rich language aligned with customer intent. Use tools like [Search Query Performance](https://sellercentral.amazon.com/help/hub/reference/external/G8J4CB5ZBF3NX7TP) to guide content updates._
 
 
-### Survival Analysis Results
+### Survival analysis results
 
 We analyze how listings maintain visibility over time (i.e., "ranking survival").
 
-#### Survival Probabilities
+#### Survival probabilities
 
-- **Organic Listings**  
+- **Organic listings**  
   - Sharp early drop, especially within first 15–30 hours.
   - Stabilize after surviving initial competition.
   
-- **Sponsored Listings**  
+- **Sponsored listings**  
   - High initial survival due to ad placement.
   - Decline over time due to ad pacing or budget constraints.
   
 - Both listing types converge to ~75% daily survival probability after Day 2.
 
-#### Feature Effects on Survival Time
+#### Feature effects on survival time
 
-- **Organic Hourly Survival**  
+- **Organic hourly survival**  
   - Improved by: sales badge, review volume, rating.
   - Not significantly affected by price competitiveness.
 
-- **Sponsored Hourly Survival**  
+- **Sponsored hourly survival**  
   - Improved by: competitive pricing.
   - Limited influence from reviews or ratings (due to paid placement dynamics).
 
-- **Daily Survival (Both Types)**  
+- **Daily survival (both types)**  
   - Strongly predicted by initial rank and category sales rank.
   - Subcategory rank has inverse relationship (possibly due to lower competition).
   
 👉 _Sellers should prioritize feature optimization during high-risk periods: early hours and Days 2–3._
 
-### Strategic Implications
+### Strategic implications
 
 Tailor product listing strategies by feature importance and desired timeframe:
 
-| Feature                    | Rank Impact | Hourly Survival (Organic) | Hourly Survival (Sponsored) | Daily Survival (Organic) | Daily Survival (Sponsored) |
+| Feature                    | Rank impact | Hourly survival (Organic) | Hourly survival (Sponsored) | Daily survival (Organic) | Daily survival (Sponsored) |
 |----------------------------|-------------|----------------------------|------------------------------|---------------------------|-----------------------------|
 | Sub-category sales rank    | +++         | ↑                          | ↑                            | ○                         | ↑                           |
 | Main category sales rank   | +++         | ↓                          | ○                            | ○                         | ↓                           |
