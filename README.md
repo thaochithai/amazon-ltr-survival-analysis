@@ -86,8 +86,6 @@ We evaluate the model's performance and feature importance using XGBoost and SHA
 
 #### Feature importance (via SHAP)
 
-<img width="500" height="747" alt="image" src="https://github.com/user-attachments/assets/01ec1316-2784-4b46-af24-09fece68ce5e" />
-
 - **Sales performance**  
   - Sales rank is the most predictive feature.
   - Sales badges (e.g., "200+ sold") are important but secondary.
@@ -112,13 +110,6 @@ We evaluate the model's performance and feature importance using XGBoost and SHA
 ### Survival analysis results
 
 We analyze how listings maintain visibility over time (i.e., "ranking survival").
-
-- **Kaplan-Meier survival curves** 
-<img width="500" height="754" alt="image" src="https://github.com/user-attachments/assets/5446dfd1-ec86-4c1b-91c1-a1359316c526" />
-
-- **Weibull PHM results** 
-<img width="500" height="710" alt="image" src="https://github.com/user-attachments/assets/a5fcf07e-10ff-459d-9fdf-5b3027a42084" />
-
 
 #### Survival probabilities
 
