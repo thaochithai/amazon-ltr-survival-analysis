@@ -38,7 +38,7 @@ This project analyzes the Amazon product ranking ecosystem using a dataset of ov
 
 ## Dataset
 Using a dataset of 28,406 unique product listings scraped from Amazon.be between March 21 and 27, 2025 (total 1,524,775 rows), this research investigates the key factors influencing product ranking and the stability of that ranking over time. 
-<img width="791" height="309" alt="image" src="https://github.com/user-attachments/assets/2ac3d949-9114-429b-9e5f-1df6f74a116a" />
+<img width="500" height="309" alt="image" src="https://github.com/user-attachments/assets/2ac3d949-9114-429b-9e5f-1df6f74a116a" />
 
 
 ## Repository structure
@@ -82,11 +82,11 @@ We evaluate the model's performance and feature importance using XGBoost and SHA
 - **Precision**: 0.441  
 - These results demonstrate strong predictive ability using publicly scraped data and outperform several comparable studies.
 - Performance varies across queries, which aligns with prior research observations.
-<img width="761" height="479" alt="image" src="https://github.com/user-attachments/assets/cf6522b4-e9e6-464a-8d66-862b443dd172" />
+<img width="500" height="479" alt="image" src="https://github.com/user-attachments/assets/cf6522b4-e9e6-464a-8d66-862b443dd172" />
 
 #### Feature importance (via SHAP)
 
-<img width="774" height="747" alt="image" src="https://github.com/user-attachments/assets/01ec1316-2784-4b46-af24-09fece68ce5e" />
+<img width="500" height="747" alt="image" src="https://github.com/user-attachments/assets/01ec1316-2784-4b46-af24-09fece68ce5e" />
 
 - **Sales performance**  
   - Sales rank is the most predictive feature.
@@ -114,10 +114,10 @@ We evaluate the model's performance and feature importance using XGBoost and SHA
 We analyze how listings maintain visibility over time (i.e., "ranking survival").
 
 - **Kaplan-Meier survival curves** 
-<img width="811" height="754" alt="image" src="https://github.com/user-attachments/assets/5446dfd1-ec86-4c1b-91c1-a1359316c526" />
+<img width="500" height="754" alt="image" src="https://github.com/user-attachments/assets/5446dfd1-ec86-4c1b-91c1-a1359316c526" />
 
 - **Weibull PHM results** 
-<img width="822" height="710" alt="image" src="https://github.com/user-attachments/assets/a5fcf07e-10ff-459d-9fdf-5b3027a42084" />
+<img width="500" height="710" alt="image" src="https://github.com/user-attachments/assets/a5fcf07e-10ff-459d-9fdf-5b3027a42084" />
 
 
 #### Survival probabilities
