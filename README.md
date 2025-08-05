@@ -19,7 +19,12 @@ To help sellers boost visibility, Amazon offers:
 
 However, the specifics of Amazon’s ranking algorithm are proprietary. Sellers are left to **infer ranking factors** based on experience and experimentation. Complicating things further, **rankings are dynamic**, evolving based on user behavior and competition. While getting to the top is challenging, **staying there is even harder**.
 
-## Research Approach
+## Research Questions & Methodologies to answer each question
+To address the gaps identified in the literature review, this research investigates two questions to provide sellers actionable insights:
+1. RQ1: How does Amazon assign ranking to products on its SERPs, and which features contribute most significantly to ranking?
+2. RQ2: What factors help products maintain their rank on Amazon SERPs over time?
+   
+These questions guide a two-part analysis: (1) building a ranking model and identifying the influential ranking features and (2) analyzing the stability of products' ranking over time. This section describes the overall methodology, data collection, cleaning and preprocessing, model selections, implementation, and evaluation.
 
 This project analyzes the Amazon product ranking ecosystem using a dataset of over **28,000 product listings** scraped hourly from [Amazon.be](https://www.amazon.be). It applies two core methodologies:
 
